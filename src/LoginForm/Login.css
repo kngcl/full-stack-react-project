@@ -1,0 +1,112 @@
+body {
+  background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/0a3b6c6cc0055afb8859a086/xxxxcv-min.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  min-height: 100vh;
+}
+
+.login_form {
+  position: absolute;
+  left: 170px;
+  top: 50px;
+}
+
+.form-control {
+  padding: 1rem 6rem;
+  border: 5px solid #fff;
+  min-height: 50vh;
+}
+
+label {
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+
+.Form_title {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.Form-group {
+  line-height: 2.3;
+}
+
+input[type='email'],
+input[type='password'] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.8px solid #fff;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  outline: none;
+  color: #fff;
+  font-style: oblique;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+::placeholder {
+  position: absolute;
+  bottom: 15px;
+}
+.Btn_submit {
+  padding: 1rem 3rem;
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 2.7px;
+  transition: background-color 0.5s;
+}
+
+.Btn_submit:hover {
+  background-color: #fff;
+  color: #000;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.link_to_registration_page {
+    border-bottom:1px solid #000;
+    color: #fff;
+    font-weight: 100;
+   font-family: 'Courier New', Courier, monospace;
+   transition: border-bottom 0.5s,color 0.5s;
+   width: 81%;
+  
+}
+
+.link_to_registration_page:hover {
+border-bottom: 1px solid #fff;
+color: #7a7979;
+cursor: pointer;
+}
+
+@media screen and  (max-width:425px) {
+    body {
+        background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/0a3b6c6cc0055afb8859a086/xxxxcv-min.jpg');
+    }
+    .login_form {
+        position: absolute;
+        left: 17px;
+        top: 50px;
+        width: 90%;
+      }
+      
+      .form-control {
+        padding: 1rem 3rem;
+        border: 5px solid #fff;
+        min-height: 50vh;
+      }
+}
