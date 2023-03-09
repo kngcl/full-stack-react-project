@@ -1,12 +1,24 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { register } from '../../api/auth';
 import '../LoginForm/Login.css';
 
 export default function Registration() {
+  const navigate = useNavigate();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const values = Object.fromEntries(data.entries());
+    await register(values);
+    console.log(values);
+    navigate('/');
+  };
   return (
     <div className="login_form">
-      <form className="form-control">
+      <form className="form-control" onSubmit={handleSubmit}>
         <h1 className="Form_title">Register Now</h1>
         <div className="Form-group">
           <div className="label_contol">
@@ -15,19 +27,19 @@ export default function Registration() {
           <div className="input_control">
             <input
               type="text"
-              name="FirstName"
+              name="firstName"
               placeholder="Please Enter Your First Name"
             />
           </div>
         </div>
         <div className="Form-group">
           <div className="label_contol">
-            <label htmlFor="LastName">Last Name</label>
+            <label htmlFor="lastName">Last Name</label>
           </div>
           <div className="input_control">
             <input
               type="text"
-              name="LastName"
+              name="lastName"
               placeholder="Please Enter Your LastName"
             />
           </div>
@@ -39,7 +51,7 @@ export default function Registration() {
           <div className="input_control">
             <input
               type="email"
-              name="email"
+              name="emailAddress"
               placeholder="Please Enter Your email"
             />
           </div>
@@ -51,7 +63,7 @@ export default function Registration() {
           <div className="input_control">
             <input
               type="number"
-              name="number"
+              name="phone"
               placeholder="Please Enter Your Phone"
             />
           </div>
@@ -63,7 +75,7 @@ export default function Registration() {
           <div className="input_control">
             <input
               type="password"
-              name="Password"
+              name="password"
               placeholder="Please Enter Your password"
             />
           </div>
@@ -74,7 +86,11 @@ export default function Registration() {
           </button>
         </div>
         <div className="Form-group">
-          <p className="link_to_registration_page">Already have an account?</p>
+          <Link to="/" className="Link_router">
+            <p className="link_to_registration_page">
+              Already have an account?
+            </p>
+          </Link>
         </div>
       </form>
     </div>

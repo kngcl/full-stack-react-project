@@ -95,7 +95,11 @@ color: #7a7979;
 cursor: pointer;
 }
 
-@media screen and  (max-width:425px) {
+.Link_router {
+  text-decoration: none;
+}
+
+@media screen and  (max-width:768px) {
     body {
         background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url('https://images01.nicepage.com/c461c07a441a5d220e8feb1a/0a3b6c6cc0055afb8859a086/xxxxcv-min.jpg');
     }
